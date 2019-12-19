@@ -54,6 +54,8 @@ public class HitsItem implements Serializable {
 	@SerializedName("_highlightResult")
 	private HighlightResult highlightResult;
 
+	private Boolean isChecked = false;
+
 	public void setCreatedAt(String createdAt){
 		this.createdAt = createdAt;
 	}
@@ -204,4 +206,12 @@ public class HitsItem implements Serializable {
 			",_highlightResult = '" + highlightResult + '\'' + 
 			"}";
 		}
+
+	public Boolean getChecked() {
+		return isChecked;
+	}
+
+	public void setChecked(Boolean checked) {
+		isChecked = checked;
+	}
 }

@@ -24,8 +24,8 @@ public class ServiceGenerator {
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             httpClient.addInterceptor(httpLoggingInterceptor);
         }
-        httpClient.connectTimeout(90, TimeUnit.SECONDS);
-        httpClient.readTimeout(90, TimeUnit.SECONDS);
+        httpClient.connectTimeout(15, TimeUnit.SECONDS);
+        httpClient.readTimeout(15, TimeUnit.SECONDS);
 
         builder.client(httpClient.build());
         retrofit = builder.build();
